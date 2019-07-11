@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="org.nearbyshops.enduserappnew">
+
+    <dist:module dist:instant="true" />
+
+
+    <!-- To auto-complete the email text field in the loginActivity form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/blue_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/blue_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
+        <service
+            android:name=".OneSignal.UpdateOneSignalID"
+            android:exported="false" />
+
+
+        <service
+            android:name=".Services.UpdateServiceConfiguration"
+            android:exported="false" />
+
+
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".Home"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".ShopsAvailableForItem.ShopItemByItem"/>
+
+
+        <activity android:name=".Login.Login"/>
+
+        <activity android:name=".ItemDetail.ItemDetail"/>
+
+        <activity android:name=".ShopDetail.ShopDetail"/>
+
+        <activity android:name=".ShopImages.ShopImageList"/>
+
+        <activity android:name=".ImageSliderShop.ImageSliderShop"/>
+
+        <activity android:name=".ItemImages.ItemImageList"/>
+
+        <activity android:name=".ImageSlider.ImageSlider"/>
+
+        <activity android:name=".EditProfile.EditProfile"/>
+
+
+        <activity android:name=".EditProfile.ChangeEmail.ChangeEmail"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity android:name=".EditProfile.ChangePhone.ChangePhone"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize"/>
+
+
+        <activity android:name=".DeliveryAddress.DeliveryAddressActivity"/>
+
+        <activity android:name=".DeliveryAddress.EditAddress.EditDeliveryAddress"/>
+
+        <activity android:name=".DeliveryAddress.PickLocation.PickLocation"/>
+
+        <activity android:name=".CartItemList.CartItemListActivity"/>
+
+        <activity android:name=".Checkout.PlaceOrderActivity"/>
+
+
+        <activity android:name=".OrderHistory.OrderHistory"/>
+
+
+        <activity android:name=".MarketDetail.MarketDetail"/>
+
+        <activity android:name=".OrderDetail.OrderDetail"/>
+
+
+        <activity android:name=".ShopHome.ShopHome"/>
+
+        <activity android:name=".ItemsInShopByCategory.ItemsInShopByCat"/>
+
+        <activity android:name=".ShopReview.ShopReviews"/>
+
+
+
+        <activity android:name=".CartsList.CartsList"/>
+
+
+        <activity
+            android:name=".SignUp.ForgotPassword.ForgotPassword"
+            android:label="Forgot Password"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <activity
+            android:name=".SignUp.SignUp"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+
+
+
+    </application>
+
+
+
+
+</manifest>
